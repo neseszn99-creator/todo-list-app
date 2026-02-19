@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="to-do.js" defer></script>
+    <title>Yapılacaklar Listesi</title>
+
+</head>
+<body> 
+    <div class="buyukkonten">
+       <div id="baslık">
+        <h2>Kategorili Yapılacaklar Listesi </h2>
+
+        <div class="todoınput">
+            <!-- inpu yazı kutucuğu-->
+            <input type="text" id="task">
+            <!-- artı butonu için-->
+            <button type="button" onclick="addtask()">⏎</button>
+            <p id="errorMessage">Lütfen geçerli bir görev giriniz.</p>
+            <!-- açılır kategori seçim menüsü-->
+             <select name="todo-opsions" id="todoopsions">
+                <option value="kisisel">Kişisel</option>
+                <option value="is">İş</option>
+                <option value="diger">Diğer</option>
+             </select>
+             <!-- alttaki çigi için boş div-->
+              <div class="cizgi"></div>
+        </div>
+      </div>
+    <div id="kategoriler">
+        <!--kişisel-->
+        <div class="kategori" id="kisisel">
+            <h3>Kişisel Görevler</h3>
+            <div id="kisiselgorevler" class="gorevcontainer"></div>
+        </div>
+        <!--iş-->
+        <div class="kategori" id="is">
+            <h3>İş Görevleri</h3>
+            <div id="isgorevler" class="gorevcontainer"></div>
+        </div>
+        <!--diğer-->
+        <div class="kategori" id="diger">
+            <h3>Diğer Görevler</h3>
+            <div id="digergorevler" class="gorevcontainer"></div>
+        </div>
+     </div>
+     </div>
+</body>
+</html>
